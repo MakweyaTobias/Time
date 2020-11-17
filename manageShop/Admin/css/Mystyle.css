@@ -1,0 +1,114 @@
+.dropdown-contentt{
+    display: none;
+    position: absolute;
+    background:white;
+    min-width: 80px;
+    height: 80px;
+    box-shadow: 0px 2px 15px 0px rgb(0, 0,0,0.2);
+    z-index: 1;
+    padding: 20px;
+}
+.dropdown-contentt a:hover{
+    background: #ddd;
+}
+.dropdown:hover .dropdown-contentt{
+    display: block;
+}
+
+.fancy-collapse-panel .panel-default > .panel-heading {
+    padding: 0 !important;
+    border: none;
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; }
+  
+  .panel-headingg a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    position: relative;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important; }
+  
+  .panel {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none; }
+  
+  .panel-headingg a:after {
+    font-family: "ionicons";
+    content: "\f3d0";
+    position: absolute;
+    right: 20px;
+    font-size: 11px;
+    font-weight: 400;
+    top: 50%;
+    line-height: 1;
+    margin-top: -8px; }
+  
+  .panel-headingg a.collapsed:after {
+    content: "\f102"; }
+  
+  .panel-headingg a.collapsed {
+    color: #333333; }
+  
+  .panel-body {
+    padding: 5px;
+   }
+    .panel-body ul {
+      margin: 0;
+      padding: 0 0 0 20px; }
+      .panel-body ul li {
+        font-size: 12px; }
+        .panel-body ul li a {
+          color: #000000; }
+          .panel-body ul li a:hover {
+            color: #dbcc8f; }
+  
+  .panel-group {
+    margin-bottom: 0; }
+
+
+    .wrapper{
+      width: 650px;
+      margin: 0 auto;
+  }
+  .page-header h2{
+      margin-top: 0;
+  }
+  table tr td:last-child a{
+      margin-right: 15px;
+  }
+.im{
+  float: left !important;
+}
+.clearFlix{
+  overflow: auto;
+}
+table{
+max-width: 100% !important;
+}
+
+@media screen and (max-width: 240px) {
+  .controll {
+      font-size: 13px !important;
+  }
+  .button1{
+    font-size: 10px !important;
+    padding: 3px 3px;
+  }
+}
+ 
+  

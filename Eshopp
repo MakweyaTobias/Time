@@ -1,0 +1,57 @@
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(60) NOT NULL,
+  `role` varchar(20) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `address` text NOT NULL,
+  `photo` varchar(200) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS `shop` (
+`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`users_id` INT(11) NOT NULL,
+`name` varchar(100) NOT NULL,
+`photo` varchar(200) NOT NULL,
+`location` varchar(60) NOT NULL,
+`description` varchar(300) NOT NULL,
+ FOREIGN KEY (users_id) REFERENCES users(id)
+
+  
+);
+CREATE TABLE IF NOT EXISTS `category` (
+`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`shop_id` INT(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(300) NOT NULL,
+  `counter` int(11) NOT NULL,
+  FOREIGN KEY (shop_id) REFERENCES shop(id)
+);
+CREATE TABLE IF NOT EXISTS `subcategory` (
+`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`category_id` INT(11) NOT NULL,
+`description` varchar(300) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  FOREIGN KEY (category_id) REFERENCES category(id)
+  
+);
+
+
+CREATE TABLE IF NOT EXISTS `products` (
+`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`subcategory_id` INT(11) NOT NULL,
+`shop_id` INT(11) NOT NULL,
+  `name` text NOT NULL,
+  `description` text NOT NULL,
+  `price` double NOT NULL,
+  `photo` varchar(200) NOT NULL,
+  `counter` int(11) NOT NULL,
+  FOREIGN KEY (subcategory_id) REFERENCES subcategory(id),
+  FOREIGN KEY (shop_id) REFERENCES shop(id)
+);
+
+
+
+
+
+
